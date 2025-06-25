@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Midi Hebdo - Flyer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/styles.css" />
+  <script type="module" src="/src/main.ts"></script>
+</head>
+<body>
+  <div class="flyer">
+    <header>
+      <div id="logo-container">
+        <!-- Logo will be inserted here -->
+        <img src="https://scontent.fctt1-1.fna.fbcdn.net/v/t39.30808-6/466043621_122094091640643306_1708798197666363630_n.png?_nc_cat=106&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=0pmKoDMOTjgQ7kNvwHh9aT8&_nc_oc=AdkG9oy988H8DqEOG1AGkC1X8q1x3sJc1vnaI2Q4dpxmRD3SMDTaiZMbjd2Qir_gbBU&_nc_zt=23&_nc_ht=scontent.fctt1-1.fna&_nc_gid=W3-34TSCqjytb_cwD7LmEw&oh=00_AfObDsuugJbr-TUWMebOVVNmqydwT2cdXfdVaNxzj_jSgw&oe=6861BF1F" alt="Midi Hebdo Logo" class="logo-image">
+      </div>
+      <p class="header-tagline">Ancré dans son territoire, ouvert sur le monde.</p>
+      <h1>MIDI HEBDO</h1> <!-- This will be visually hidden but kept for SEO -->
+    </header>
+
+    <section class="content">
+      <div class="description">
+        <p class="tagline">Partisans du recentrage et d'une ligne directrice généraliste, Midi-Hebdo est un journal respectant parfois jusqu'à la caricature les vertus du débat interne.</p>
+        <div class="details">
+          <p>Numéro RNA : W341014443</p>
+          <p>N° de parution : 20250016</p>
+          <p>N° d'annonce : 783</p>
+        </div>
+      </div>
+
+      <div class="highlights">
+        <h2>À découvrir dans ce journal</h2>
+        <ul>
+          <li>Analyses politiques et débats actuels</li>
+          <li>Reportages sur la région de Roujan et alentours</li>
+          <li>Opinions variées et perspectives diverses</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="find-us">
+      <h3>Comment nous trouver</h3>
+      <div class="find-us-methods">
+        <div class="qr-method">
+          <div id="qrcode-container">
+            <!-- QR code will be inserted here -->
+          </div>
+          <p class="method-title">Scannez ce code</p>
+          <p class="method-description">Pour accéder directement à notre page</p>
+        </div>
+
+        <div class="divider">
+          <span>OU</span>
+        </div>
+
+        <div class="search-method">
+          <div class="search-icon">
+            <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </div>
+          <p class="method-title">Tapez "MIDI HEBDO"</p>
+          <p class="method-description">Dans la barre de recherche Facebook</p>
+          <div class="search-bar">
+            <span class="search-text">MIDI HEBDO</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p class="location">Roujan, France</p>
+      <p class="contact">Pour plus d'informations: trouvez-nous sur Facebook</p>
+    </footer>
+  </div>
+
+  <div class="print-button">
+    <button onclick="printFlyer()">Imprimer ce flyer en haute qualité</button>
+    <p class="print-info">Les couleurs et les éléments seront préservés à l'impression</p>
+  </div>
+
+  <script>
+    function printFlyer() {
+      // Hide everything except the flyer before printing
+      document.body.classList.add('printing');
+
+      // Wait a moment for styles to apply
+      setTimeout(function() {
+        window.print();
+
+        // Reset after printing
+        setTimeout(function() {
+          document.body.classList.remove('printing');
+        }, 500);
+      }, 100);
+    }
+  </script>
+</body>
+</html>
